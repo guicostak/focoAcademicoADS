@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/public/pageIcon.ico" />
+    <link rel="stylesheet" href="./home.css" />
+    <link rel="stylesheet" href="../../common/styles/global-styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Foco Acadêmico</title>
+</head>
+
+<body class="home-body">
+    <header class="header">
+        <a class="navbar-brand" href="./index.html"><img class="logo" src="../../assets/img/focoAcademicoIcon.png" /></a>
+        <nav class="navbar">
+            <ul class="nav-options">
+                <li class="option btn-home"><a href="./index.html">Home</a></li>
+                <li class="option btn-sobre"><a href="../Sobre/sobre.html">Sobre</a></li>
+                <li class="option btn-login" id="btn-login">Login</li>
+                <li class="option dropdown tools-btn"> <a class="dropdown-toggle" href="#" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Ferramentas</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="../Anotações/anotacoes.html">Anotações</a>
+                        <a class="dropdown-item" href="index.html">Relógio Polmodoro</a>
+                    </div>
+                </li>
+                <li> <button class="default-btn cadastro-header cadastro-btn"><i class="fas fa-user" style="margin-right: 0.5rem;"></i> Cadastre-se</button></li>
+            </ul>
+
+        </nav>
+    </header>
+    <main class="main-container">
+        <h1 class="main-title-home title">
+            O seu espaço para estudar
+        </h1>
+        <h2 class="subtitle-home">Um ambiente onde você reune as melhores <br>
+            ferramentas para estudar e atingir seus objetivos
+        </h2>
+        <button class="default-btn home-btn cadastro-btn"><i class="fas fa-rocket" style="margin-right: 0.5rem;"></i> Cadastre-se</button>
+    </main>
+    <footer class="footer">
+        <div class="footerContainer">
+            <p class="footerTexto">PROJETO: DESENVOLVIMENTO - 4577105 - TECNOLOGIA EM ANÁLISE E DESENVOLVIMENTO DE SISTEMAS - EAD - VIRTUAL - PUC - G1_18_30</p>
+        </div>
+    </footer>
+    <div class="modal-container">
+        <form id="modal-cadastro">
+            <span class="btn-close-cadastro">x</span>
+            <legend>Cadastre-se agora</legend>
+
+            <div class="input-wrapper">
+                <label for="nome" id="labelNomeCadastro"><i class='bx bxs-user' style='color:#f2f2f2'></i> Nome</label>
+                <input type="text" id="cadNome" name="nome">
+            </div>
+            <div class="input-wrapper">
+                <label for="email" id="labelEmailCadastro"><i class='bx bxs-envelope' style='color:#f2f2f2'></i> Email</label>
+                <input type="email" id="cadEmail" name="email">
+            </div>
+            <div class="input-wrapper">
+                <label for="senha" id="labelSenhaCadastro"><i class='bx bxs-lock-alt' style='color:#f2f2f2'></i> Senha</label>
+                <input type="password" id="cadSenha" name="senha">
+            </div>
+
+            <button class=".cadastro-btn" id="btn-cadastrar">Cadastrar agora</button>
+        </form>
+    </div>
+
+    <div class="modal-container-login">
+        <form id="modal-login">
+            <span class="btn-close-login">x</span>
+            <legend>Entrar agora</legend>
+
+            <div class="input-wrapper">
+                <label for="email"><i class='bx bxs-envelope' style='color:#f2f2f2'></i> Email</label>
+                <input type="email" id="loginEmail" name="email">
+
+            </div>
+            <div class="input-wrapper">
+                <label for="senha"><i class='bx bxs-lock-alt' style='color:#f2f2f2'></i> Senha</label>
+                <input type="password" id="loginSenha" name="senha">
+                <i class='bx bx-low-vision' style='color:rgba(0, 0, 0, 0.6)' id="btn-senha" onclick="mostrarSenha()"></i>
+
+            </div>
+
+            <button id="btn-submit-login"> Entrar </button>
+        </form>
+
+    </div>
+    <script src="./home.js" defer></script>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</html>
